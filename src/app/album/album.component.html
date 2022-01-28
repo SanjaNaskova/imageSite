@@ -1,0 +1,35 @@
+<div class="mainContainer">
+<h2 class="albumName">{{album.name}}</h2>
+<div class="albumWrap">
+    <div *ngFor="let image of album.images" class="imageContainer">
+        <div 
+        class="imageContent"
+        >
+            <img 
+            class="image"
+            *ngIf="!imagesSelected.includes(image)"
+            [src]="image.download_url" 
+            alt=""
+            >
+            <button 
+            *ngIf="!imagesSelected.includes(image)"
+            class="removeBtn" 
+            (click)="removeImg(image.id)"
+            >REMOVE</button>
+            <button 
+                *ngIf="imagesSelected.includes(image)"
+                class="addBtn"
+                (click)="addImage(image.id)"
+            >&#43;</button>
+        </div>
+    </div>
+</div>
+<div class="options">
+    <button (click)="goBack()" class="backBtn">GO BACK</button>
+    <button class="saveBtn" (click)="showMessage()">SAVE</button>
+</div>
+</div>
+
+<div id="message">
+    <p>This is a success message!</p>
+  </div>

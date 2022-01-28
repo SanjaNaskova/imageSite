@@ -1,0 +1,91 @@
+header{
+    background: #000;
+    color: #fff;
+    text-align: center;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+}
+#loginContainer{
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+    height: calc(100vh - 230px);
+}
+
+.intro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+p, h1{
+    margin: 0;
+}
+h1{
+    font-size: 35px;
+}
+p{
+    font-size: 15px;
+}
+
+small{
+    color: red;
+}
+
+form{
+    display:flex;
+    flex-direction: column;
+    padding: 40px;
+    align-items: center;
+}
+
+label{
+    font-size: 13px;
+    font-weight: 600;
+    margin: 5px;
+}
+input{
+    margin: 10px;
+    background: none;
+    border: 2px solid #000;
+    padding: 7px;
+    width: 200px;
+}
+.loginBtn{
+    width: 75px;
+    padding: 3px;
+    margin-top: 10px;
+    background: #000;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 600;
+    border: 2px solid #000;
+}
+.loginBtn:hover{
+    background: #fff;
+    color: #000;
+}
+
+.invalid{
+    border: 2px solid rgb(196, 36, 36);
+}
+
+.loginImg{
+    width: 100%;
+    max-width: 400px;
+    height: 200px;
+}
+
+footer{
+    background: #000;
+    width: 100%;
+    height: 165px;
+    margin: 0;
+}

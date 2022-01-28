@@ -1,0 +1,17 @@
+<div class="card" *ngIf="image">
+    <div class="options"> 
+        <button class="whiteBtn">ADD TO ALBUM &#43;</button>
+        <button class="downloadBtn">DOWNLOAD</button>
+    </div>
+    <img [src]="image.download_url" alt="">
+    <div class="details">
+        <p class="uploadedBy">UPLOADED BY</p>
+        <P class="author">{{image.author}}</P>
+    </div>
+    <button 
+        class="whiteBtn"
+        (click)="goBack()"
+        >
+        Go back
+    </button>
+</div>

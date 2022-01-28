@@ -1,0 +1,48 @@
+<div class="mainContainer">
+  <header>valstock</header>
+<div id="loginContainer">
+    <div class="intro">
+        <h1>Join our stock community!</h1>
+    <p>Download free photos and videos powered by the best photographers.</p>
+    </div>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="form">
+        <label for="username">USERNAME</label>
+        <input 
+          type="text" 
+          formControlName="username" 
+          placeholder="Enter username here..."
+          [ngClass]="{invalid: loginForm.controls['password'].invalid &&
+          loginForm.controls['password'].touched }"
+          >
+        <small
+        *ngIf="
+          loginForm.controls['username'].invalid &&
+          loginForm.controls['username'].touched
+        "
+        >
+        There is something wrong!
+        </small >
+        <label for="password">PASSWORD</label>
+        <input 
+          type="password" 
+          formControlName="password" 
+          placeholder="Enter password here..."
+          [ngClass]="{invalid: loginForm.controls['password'].invalid &&
+          loginForm.controls['password'].touched }"
+          >
+        <small
+        *ngIf="
+          loginForm.controls['password'].invalid &&
+          loginForm.controls['password'].touched
+        "
+        >
+        There is something wrong!
+        </small >
+        <button type="submit" class="loginBtn">LOG IN</button>
+    </form>
+    <div>
+      <img class="loginImg" src="../assets-image/Vector.png" alt="camera">
+    </div>
+</div>
+<footer></footer>
+</div>

@@ -1,0 +1,56 @@
+
+<div>
+    <ul class="container">
+        <li *ngFor="let image of allImages">
+       <a 
+       routerLink="/details/{{image.id}}"
+       >
+         <img [src]="image.download_url" alt="">
+          <button
+          class="addBtn"
+          (click)="openModal($event, image)"
+          >
+          Add to album
+          </button>
+       </a>
+    </li>
+    </ul>
+</div>
+
+    <div id="modal">
+      <div class="modalContainer">
+        <div class="optionBtns">
+          <button (click)="showOptionsForAdd('new')">
+            CREATE NEW ALBUM
+          </button>
+          <button (click)="showOptionsForAdd('existing')" >
+            ADD TO EXISTING
+          </button>
+        </div>
+        <div>
+          <div class="newTitle" *ngIf="option === 'new'">
+              <input type="text" placeholder="Enter title here">
+          </div>
+          <div class="existingAlbum" *ngIf="option === 'existing'">
+            <p 
+            class="modalAlbumName"
+            *ngFor="let album of allAlbums"
+            (click)="addOrRemoveAlbum(album.id)"
+
+            >
+            {{album.name}}
+          </p>
+          </div>
+        </div>
+        <div class="cancelSaveBtns">
+          <button onclick="document.getElementById('modal').style.display='none'" 
+          class="closeModalBtn">CANCEL</button>
+          <button class="saveBtn" (click)="saveImgToAlbums()">SAVE</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="message">
+      <p>This is a success message!</p>
+    </div>
+      

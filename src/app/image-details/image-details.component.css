@@ -1,0 +1,59 @@
+.card{
+    width: 100%;
+    max-width: 600px;
+
+    margin: 0 auto;
+    /* background: pink; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.options{
+    margin: 20px 0;
+}
+
+.options > button{
+    margin-right: 10px;
+}
+
+img{
+    width: 400px;
+    margin: 0;
+}
+
+.details{
+    margin: 20px 0;
+}
+
+.uploadedBy{
+    font-size: 10px;
+    font-weight: 600;
+    text-align: center;
+    margin: 0;
+}
+
+.author{
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+}
+
+button{
+    border: 2px solid #000;
+    padding: 3px 20px;
+    background: none;
+    font-weight: 600;
+    font-size: 11px;
+}
+
+.whiteBtn:hover{
+    background: #000;
+    color: #fff;
+}
+
+.downloadBtn{
+    background: #000;
+    color: #fff;
+}

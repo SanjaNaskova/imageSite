@@ -1,0 +1,98 @@
+.mainContainer{
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+
+}
+.imageContainer{
+    display: inline-block;
+    box-sizing: border-box;
+    width: 33.3%;
+    padding: 10px;
+}
+
+.albumName{
+    text-align: center;
+}
+
+.image{
+    width: 100%;
+}
+
+.imageContent{
+    position: relative;
+    height: 100%;
+}
+
+.removeBtn, .addBtn{
+    position: absolute;
+}
+.removeBtn{
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgb(204, 107, 112);
+    color: #fff;
+    border: none;
+    height: 35px;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+.imageContent:hover .removeBtn{
+    visibility: visible;
+}
+
+.addBtn{
+    bottom: 50%;
+    left: 50%;
+    border: none;
+    background: none;
+    
+    cursor: pointer;
+}
+
+.options{
+    margin-top: 40px;
+    text-align: center;
+}
+
+.options button{
+    width: 100px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+.backBtn{
+    background: none;
+    border: 2px solid #000;
+}
+.backBtn:hover{
+    background: #000;
+    color: #fff;
+}
+
+.saveBtn{
+    background: #000;
+    color: #fff;  
+    border: 2px solid #000;  
+}
+
+.saveBtn:hover{
+    background: none;
+    color: #000;
+}
+
+#message{
+    position: fixed;
+    bottom: 0;
+    background: black;
+    color: white;
+    width: 100%;
+    height: 100px;
+    margin: 0;
+    display: none;  
+    font-size: 30px;
+    text-align: center;
+}

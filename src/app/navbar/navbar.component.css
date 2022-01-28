@@ -1,0 +1,54 @@
+nav{
+    background:#000;
+    color: #fff;
+}
+ul{
+    width: 100%;
+    max-width: 900px;
+    height: 35px;
+    margin: 0 auto;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    align-items: center;
+}
+
+li{
+    width: 100%;
+    margin: 10px 0;
+}
+
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 1;
+    font-size: 15px;
+    gap: 3px;
+    background: #fff;
+    width: initial;
+    height: auto;
+    padding: 10px;
+    border: 2px solid #000; 
+    top: 34px;
+
+}
+.albumName{
+    text-decoration: none;
+    color: #9e9e9e;
+}
+.albumName:hover{
+    color: #000;
+}
+
+.albums{
+    cursor: pointer;
+    font-size: 12px;
+}
+span{
+    border: 1px solid #fff;
+    padding: 3px 12px;
+    font-size: 10px;
+    font-weight: 700;
+}

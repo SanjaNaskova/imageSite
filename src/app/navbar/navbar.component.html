@@ -1,0 +1,15 @@
+<nav *ngIf="isUserLogedIn()">
+    <ul>
+        <li id="logo">valstock</li>
+        <li class="albums" (click)="showDropdown()"><span>MY ALBUMS</span>
+            <ul class="dropdown" *ngIf="dropdown">
+                <li *ngFor="let album of albums">
+                    <a class="albumName" routerLink="/album/{{album.id}}">
+                        {{album.name}}
+                    </a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+
